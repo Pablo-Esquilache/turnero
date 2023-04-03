@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/app.css" />
+    <title>H O M E</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <li class="login">Iniciar Sesion</li>
+        <li class="register">Registrarme</li>
+        <li class="admin"><a href="./paginas/administracion.html">Administracion</a></li>
+        <li class="logout">Cerrar Sesion</li>
+      </nav>
+    </header>
+    <main id="main_container">
+      <div class="login_container">
+        <h2>Login</h2>
+        <div class="form_login_container">
+          <form id="form_login">
+            <div>
+              <label for="email_login">Ingrese su email</label>
+              <input type="email" id="email_login" required />
+              <p class="msg_usuario_login"></p>
+            </div>
+            <div>
+              <label for="passw_login">Ingrese su contraseña</label>
+              <input type="password" id="passw_login" required />
+              <p class="msg_password_login"></p>
+            </div>
+            <input type="submit" value="Login" />
+            <p class="link_register">registrese aqui</p>
+          </form>
+        </div>
+      </div>
+      <div class="register_container">
+        <h2>Regitro</h2>
+        <div class="form_register_container">
+          <form id="form_register">
+            <div>
+              <label for="name">Ingrese su nombre y apelldio</label>
+              <input type="text" id="name" required />
+            </div>
+            <div>
+              <label for="email_register">Ingrese su email</label>
+              <input type="email" id="email_register" required />
+            </div>
+            <div>
+              <label for="passw_register">Ingrese su contraseña</label>
+              <input type="password" id="passw_register" required />
+            </div>
+            <input type="submit" value="Login" />
+          </form>
+        </div>
+      </div>
+      <div class="turnos_container">
+        <div class="text_turns">
+          <h1>Saca tu turno</h1>
+        </div>
+        <div class="form_container">
+          <form id="form_turnos">
+            <div>
+              <label for="name_turns">Nombre y Apellido</label>
+              <input type="text" id="name_turns" required />
+            </div>
+            <div>
+              <label for="tel">Numero de celular</label>
+              <input type="text" id="tel" required />
+            </div>
+            <div>
+              <label for="date">Elige una fecha</label>
+              <input type="date" id="date" required />
+            </div>
+            <div>
+              <label for="time">Elige hora</label>
+              <select name="" id="time" required>
+                <option value="">seleccione un horario</option>
+                <option value="8">8</option>
+                <option value="8.30">8.3</option>
+                <option value="9">9</option>
+                <option value="9.3">9.3</option>
+              </select>
+            </div>
+            <input type="submit" value="enviar" class="btn_enviar" />
+            <p class="msg_turnOk"></p>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="./javascript_index/app.js" type="module" ></script>
+    <!-- <script type="module" src="./firebase.js"></script> -->
+  </body>
+</html>
