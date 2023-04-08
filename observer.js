@@ -19,7 +19,12 @@ export const btn_login = document.querySelector(".login");
 
 export const observer = () => {
   onAuthStateChanged(auth, (user) => {
-    if (user) {
+    if (!user) {
+      logout.classList.add("disabled");
+      btn_register.classList.remove("disabled");
+      btn_login.classList.remove("disabled");
+      btn_admin.classList.add("disabled");
+    } else {
       const user_uid = user.uid;
       const docRef = doc(db, "users", user_uid);
       form_container.style.display = "flex";
@@ -55,11 +60,6 @@ export const observer = () => {
       //       console.log(error);
       //     });
       // }, 7200000);
-    } else {
-      logout.classList.add("disabled");
-      btn_register.classList.remove("disabled");
-      btn_login.classList.remove("disabled");
-      btn_admin.classList.add("disabled");
     }
   });
 };

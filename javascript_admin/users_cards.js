@@ -2,6 +2,7 @@ import { deleteUser } from "./delete_users.js";
 import { editUser } from "./edit_users.js";
 import { users_container } from "./print_users.js";
 import { updateUser } from "./update_users.js";
+import { deleteUserAuth } from "./delete_users_auth.js";
 
 const rol = document.querySelector("#rol")
 const save_rol = document.querySelector("#save_rol")

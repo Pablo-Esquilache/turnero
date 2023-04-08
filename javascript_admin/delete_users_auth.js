@@ -1,8 +1,8 @@
 import { auth } from "../firebase.js";
 import { deleteUser } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
 
-
-const auth = getAuth();
+export const deleteUserAuth = (uid) => {
+  const auth = getAuth();
 const user = auth.currentUser;
 
 deleteUser(user).then(() => {
@@ -11,3 +11,4 @@ deleteUser(user).then(() => {
   // An error ocurred
   // ...
 });
+};
