@@ -8,6 +8,7 @@ export const setUsers = async (name, usuario, uid) => {
     const docRef = await setDoc(doc(db, "users", uid), {
       Nombre: name,
       Usuario: usuario,
+      Rol: ""
     });
   } catch (e) {
     console.error("Error adding document: ", e);

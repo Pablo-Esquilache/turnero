@@ -4,8 +4,8 @@ import {
   getDoc,
 } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-firestore.js";
 
-export const editUser = async (id) => {
-  const docRef = doc(db, "users", id);
+export const editTurn = async (id) => {
+  const docRef = doc(db, "turnos", id);
   const docSnap = await getDoc(docRef);
 
   if (docSnap.exists()) {

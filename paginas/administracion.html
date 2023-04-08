@@ -1,39 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/administracion.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/administracion.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav class="nav_admin">
-          <li class="index"><a href="../index.html">Inicio</a></li>
-        </nav>
-      </header>
+      <nav class="nav_admin">
+        <a href="../index.html"><li class="index">Inicio</li></a>
+      </nav>
+    </header>
     <main>
-        <section class="users">
+      <section class="users">
+        <div>
+          <h1>Usuarios</h1>
+        </div>
+        <div class="users_container"></div>
+        <div class="rol_container">
+          <h2>Modificar Rol</h2>
+          <input type="text" name="Rol" id="rol" />
+          <input id="save_rol" type="button" value="Guardar" />
+        </div>
+      </section>
+      <section class="turns">
+        <div>
+          <h1>Turnos</h1>
+        </div>
+        <div class="turns_container"></div>
+        <div class="edit_container">
+          <h2>Modificar Turno</h2>
+          <div class="edit_container2">
             <div>
-                <h1>Usuarios</h1>
+              <label for="turn_date">Fecha</label>
+              <input type="text" id="turn_date" />
             </div>
-            <div class="users_container"></div>
-            <div class="rol_container">
-                <h2>Modificar Rol</h2>
-                <input type="text" name="Rol" id="">
-                <input type="button" value="Guardar">
-                
-            </div>            
-        </section>
-        <section class="turns">
             <div>
-                <h1>Turnos</h1>
+                <input type="button" id="save_new_date" value="Modificar" />
+              </div>
+            <div>
+              <label for="turn_hora">Hora</label>
+              <input type="text" id="turn_hora" />
             </div>
-            <div class="turns_container"></div>            
-        </section>
+            <div>
+              <input type="button" id="save_new_hora" value="Modificar" />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="../javascript_admin/admin.js" type="module"></script>
     <!-- <script type="module" src="./firebase.js" ></script> -->
-</body>
+  </body>
 </html>
