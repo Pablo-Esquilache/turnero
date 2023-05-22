@@ -1,9 +1,9 @@
-import { auth } from "../firebase.js";
+import { auth } from "./firebase.js";
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
 import { register_container, login_container } from "./app.js";
 import { setUsers } from "./set_users.js";
 import { logout } from "./logout.js";
-import { btn_login, btn_register } from "../observer.js";
+import { btn_login, btn_register } from "./observer.js";
 
 const form_register = document.querySelector("#form_register");
 

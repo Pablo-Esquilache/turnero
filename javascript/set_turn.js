@@ -1,9 +1,9 @@
-import { db } from "../firebase.js";
+import { db } from "./firebase.js";
 import {
   collection,
   addDoc,
 } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-firestore.js";
-import { msg_turnOk } from "./app.js";
+import { msg_turnOk } from "../javascript_index/app.js";
 
 export const setTurn = async (name_turns, userEmail, tel,  date, time) => {
   try {

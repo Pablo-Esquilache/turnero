@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/formulario.css" />
+    <link rel="stylesheet" href="../css/app.css">
+    <title>Formulario</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <li class="login">Iniciar Sesion</li>
+        <li class="register">Registrarme</li>
+        <a href="./paginas/administracion.html"
+          ><li class="admin">Administracion</li></a
+        >
+        <li class="logout">Cerrar Sesion</li>
+      </nav>
+    </header>
+    <section>
+      <div class="turnos_container">
+        <div class="text_turns">
+          <h1>Saca tu turno</h1>
+        </div>
+        <div class="form_container">
+          <form id="form_turnos">
+            <div>
+              <label for="name_turns">Nombre y Apellido</label>
+              <input type="text" id="name_turns" required />
+            </div>
+            <div>
+              <label for="tel">Numero de celular</label>
+              <input type="text" id="tel" required />
+            </div>
+            <div>
+              <label for="date">Elige una fecha</label>
+              <input type="date" id="date" required />
+            </div>
+            <div>
+              <label for="time">Elige hora</label>
+              <select name="" id="time" required>
+                <option value="">seleccione un horario</option>
+                <option value="8">8</option>
+                <option value="8.30">8.3</option>
+                <option value="9">9</option>
+                <option value="9.3">9.3</option>
+              </select>
+            </div>
+            <input type="submit" value="enviar" class="btn_enviar" />
+            <p class="msg_turnOk"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- <script src="../javascript_form/form.js" type="module"></script> -->
+  </body>
+</html>

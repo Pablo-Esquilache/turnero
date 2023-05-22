@@ -1,4 +1,4 @@
-import { auth } from "../firebase.js";
+import { auth } from "./firebase.js";
 import { signOut } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
 import { register_container, login_container, form_container } from "./app.js";
 

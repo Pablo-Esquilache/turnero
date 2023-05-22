@@ -9,9 +9,8 @@ import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.18.0/fi
 import {
   login_container,
   register_container,
-  form_container,
-} from "./javascript_index/app.js";
-import { logout } from "./javascript_index/logout.js";
+} from "./app.js";
+import { logout } from "./logout.js";
 
 const btn_admin = document.querySelector(".admin");
 export const btn_register = document.querySelector(".register");
@@ -27,7 +26,6 @@ export const observer = () => {
     } else {
       const user_uid = user.uid;
       const docRef = doc(db, "users", user_uid);
-      form_container.style.display = "flex";
       login_container.style.display = "none";
       register_container.style.display = "none";
       logout.classList.remove("disabled");

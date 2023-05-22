@@ -1,4 +1,4 @@
-import { auth } from "../firebase.js";
+import { auth } from "./firebase.js";
 import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
 import {
   form_container,
@@ -33,6 +33,9 @@ export const login_ = () => {
         form_container.style.display = "flex";
         login_container.style.display = "none";
       }, 3000);
+
+      window.location.href = "../paginas/formulario.html";
+
     } catch (error) {
       const errorCode = error.code;
       const errorMessage = error.message;

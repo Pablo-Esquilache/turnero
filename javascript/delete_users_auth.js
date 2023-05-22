@@ -1,4 +1,4 @@
-import { auth } from "../firebase.js";
+import { auth } from "./firebase.js";
 import { deleteUser } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
 
 export const deleteUserAuth = (uid) => {

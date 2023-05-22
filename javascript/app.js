@@ -1,12 +1,8 @@
-import { observer } from "../observer.js";
+import { observer } from "./observer.js";
 import { login_ } from "./login.js";
 import { register_ } from "./register.js";
 import { logout_ } from "./logout.js";
-import { getTurns } from "../get_turns.js";
-import { turnRegister } from "./turn_register.js";
-import { formSubmit } from "./form_submit.js";
-
-export let turnos = [];
+// import { loadTurnos } from "../javascript_form/form.js";
 
 const login = document.querySelector(".login");
 const register = document.querySelector(".register");
@@ -20,23 +16,12 @@ export const msg_turnOk = document.querySelector(".msg_turnOk");
 
 // ------------------------------------------------------------------------
 
-const loadTurnos = () => {
-  getTurns((querySnapshot) => {
-    turnos = [];
-    querySnapshot.forEach((doc) => {
-      turnos.push({ id: doc.id, ...doc.data() });
-    });
-    turnRegister(turnos);
-  });
-};
-
 window.addEventListener("DOMContentLoaded", async () => {
   observer();
   login_();
   register_();
   logout_();
-  loadTurnos();
-  formSubmit();
+  //loadTurnos();
 });
 
 // ------------------------------------------------------------------------
@@ -60,6 +45,5 @@ register.addEventListener("click", () => {
 
 // ------------------------------------------------------------------------
 
-let currentDate = new Date().toISOString().split('T')[0];
-document.getElementById("date").setAttribute("min", currentDate);
+
 
