@@ -2,7 +2,6 @@ import { observer } from "./observer.js";
 import { login_ } from "./login.js";
 import { register_ } from "./register.js";
 import { logout_ } from "./logout.js";
-// import { loadTurnos } from "../javascript_form/form.js";
 
 const login = document.querySelector(".login");
 const register = document.querySelector(".register");
@@ -18,10 +17,9 @@ export const msg_turnOk = document.querySelector(".msg_turnOk");
 
 window.addEventListener("DOMContentLoaded", async () => {
   observer();
-  login_();
   register_();
+  login_();
   logout_();
-  //loadTurnos();
 });
 
 // ------------------------------------------------------------------------

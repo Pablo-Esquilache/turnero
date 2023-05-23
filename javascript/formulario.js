@@ -15,6 +15,7 @@ export const loadTurnos = () => {
   };
 
   window.addEventListener("DOMContentLoaded", () => {
+    loadTurnos();
     formSubmit();
   });
 

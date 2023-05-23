@@ -30,11 +30,10 @@ export const login_ = () => {
       link_register.innerText = "Login Exitoso";
       setTimeout(() => {
         link_register.innerText = "registrese aqui";
-        form_container.style.display = "flex";
-        login_container.style.display = "none";
+        window.location.href = "../paginas/formulario.html";
       }, 3000);
 
-      window.location.href = "../paginas/formulario.html";
+      
 
     } catch (error) {
       const errorCode = error.code;

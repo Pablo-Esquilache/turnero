@@ -36,10 +36,6 @@ nav li:hover {
   background-color: brown;
   cursor: pointer;
 }
-/* .admin {
-  display: none;
-} */
-
 .disabled {
   display: none;
 }

@@ -27,7 +27,7 @@ export const register_ = () => {
         login_container.style.display = "flex";
         logout.classList.add("disabled");
         btn_register.classList.remove("disabled");
-      btn_login.classList.remove("disabled");
+        btn_login.classList.remove("disabled");
       })
       .catch((error) => {
         const errorCode = error.code;
