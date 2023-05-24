@@ -8,6 +8,7 @@ import { btn_login, btn_register } from "./observer.js";
 const form_register = document.querySelector("#form_register");
 
 export const register_ = () => {
+  if (form_register){
   form_register.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -34,4 +35,5 @@ export const register_ = () => {
         const errorMessage = error.message;
       });
   });
+}
 };

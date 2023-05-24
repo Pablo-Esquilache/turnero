@@ -13,6 +13,7 @@ const form_login = document.querySelector("#form_login");
 let userEmail = "";
 
 export const login_ = () => {
+  if (form_login){
   form_login.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -61,6 +62,7 @@ export const login_ = () => {
       msg_password_login.innerText = "";
     }, 3000);
   });
+}
 };
 
 export { userEmail };

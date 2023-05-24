@@ -11,7 +11,6 @@ export const register_container = document.querySelector(".register_container");
 export const form_container = document.querySelector(".turnos_container");
 export const msg_usuario_login = document.querySelector(".msg_usuario_login");
 export const msg_password_login = document.querySelector(".msg_password_login");
-export const msg_turnOk = document.querySelector(".msg_turnOk");
 
 // ------------------------------------------------------------------------
 
@@ -20,28 +19,39 @@ window.addEventListener("DOMContentLoaded", async () => {
   register_();
   login_();
   logout_();
+
+  // ------------------------------------------------------------------------
+
+  if (login && register && link_register) {
+    login.addEventListener("click", () => {
+      login_container.style.display = "flex";
+      register_container.style.display = "none";
+    });
+  
+    link_register.addEventListener("click", () => {
+      login_container.style.display = "none";
+      register_container.style.display = "flex";
+    });
+  
+    register.addEventListener("click", () => {
+      login_container.style.display = "none";
+      register_container.style.display = "flex";
+    });
+  }
+  
+
+  // login.addEventListener("click", () => {
+  //   login_container.style.display = "flex";
+  //   register_container.style.display = "none";
+  // });
+
+  // link_register.addEventListener("click", () => {
+  //   login_container.style.display = "none";
+  //   register_container.style.display = "flex";
+  // });
+
+  // register.addEventListener("click", () => {
+  //   login_container.style.display = "none";
+  //   register_container.style.display = "flex";
+  // });
 });
-
-// ------------------------------------------------------------------------
-
-login.addEventListener("click", () => {
-  login_container.style.display = "flex";
-  register_container.style.display = "none";
-});
-
-link_register.addEventListener("click", () => {
-  login_container.style.display = "none";
-  register_container.style.display = "flex";
-});
-
-// ------------------------------------------------------------------------
-
-register.addEventListener("click", () => {
-  login_container.style.display = "none";
-  register_container.style.display = "flex";
-});
-
-// ------------------------------------------------------------------------
-
-
-

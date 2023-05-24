@@ -3,7 +3,7 @@ import {
   collection,
   addDoc,
 } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-firestore.js";
-import { msg_turnOk } from "../javascript_index/app.js";
+import { msg_turnOk } from "./formulario.js";
 
 export const setTurn = async (name_turns, userEmail, tel,  date, time) => {
   try {
@@ -14,6 +14,7 @@ export const setTurn = async (name_turns, userEmail, tel,  date, time) => {
       Fecha: date,
       Hora: time,
     });
+    console.log("aca anda");
     msg_turnOk.innerText = "Turno guardado con exito";
     setTimeout(() => {
       msg_turnOk.innerText = "";
