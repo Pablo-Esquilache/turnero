@@ -14,7 +14,6 @@ export const setTurn = async (name_turns, userEmail, tel,  date, time) => {
       Fecha: date,
       Hora: time,
     });
-    console.log("aca anda");
     msg_turnOk.innerText = "Turno guardado con exito";
     setTimeout(() => {
       msg_turnOk.innerText = "";

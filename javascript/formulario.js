@@ -6,7 +6,7 @@ export const msg_turnOk = document.querySelector(".msg_turnOk");
 
 window.addEventListener("DOMContentLoaded", () => {
   loadTurnos();
-  formSubmit;
+  formSubmit();
   logout_;
   
   let currentDate = new Date().toISOString().split("T")[0];
