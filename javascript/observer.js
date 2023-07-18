@@ -20,7 +20,9 @@ export const observer = () => {
           if (doc.exists()) {
             const admin = doc.data();
             if (admin.Rol === "administrador") {
-              btn_admin.classList.remove("disabled");
+              if (btn_admin) {
+                btn_admin.classList.remove("disabled");
+              }
             }
           } else {
             console.log("No such document!");

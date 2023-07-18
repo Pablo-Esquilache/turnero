@@ -1,8 +1,6 @@
 import { auth } from "./firebase.js";
 import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
 import {
-  form_container,
-  login_container,
   msg_usuario_login,
   msg_password_login,
   link_register,
@@ -25,10 +23,10 @@ export const login_ = () => {
         auth,
         email_login,
         passw_login
-      );
-      userEmail = userCredential.user.email;
-      form_login.reset();
-      link_register.innerText = "Login Exitoso";
+        );
+        userEmail = userCredential.user.email;
+        link_register.innerText = "Login Exitoso";
+        form_login.reset();
       setTimeout(() => {
         link_register.innerText = "registrese aqui";
         window.location.href = "../paginas/formulario.html";
@@ -65,4 +63,5 @@ export const login_ = () => {
 }
 };
 
+console.log(userEmail)
 export { userEmail };
